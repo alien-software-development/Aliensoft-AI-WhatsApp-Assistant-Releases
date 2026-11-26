@@ -7,9 +7,9 @@
 **Native Windows 10/11 (x64) AI-Powered WhatsApp Automation & Smart Customer Support Suite**  
 Built by **[Alien Software Development](https://aliensoftwaredevelopment.com)** · Dhaka, Bangladesh
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-16A34A?style=for-the-badge)](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)
-[![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-0284C7?style=for-the-badge)](#quick-start-offline-portable)
-[![30-Day Free Trial](https://img.shields.io/badge/License-30--Day%20Free%20Trial-F59E0B?style=for-the-badge)](#licensing--clean-install-guarantee)
+[![Download Setup EXE](https://img.shields.io/badge/Download-Windows%20Installer%20(.exe)-16A34A?style=for-the-badge)](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)
+[![Download Portable ZIP](https://img.shields.io/badge/Download-Offline%20Portable%20(.zip)-0284C7?style=for-the-badge)](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)
+[![Auto-Update](https://img.shields.io/badge/Auto--Update-GitHub%20Releases-7C3AED?style=for-the-badge)](#automatic-updates)
 
 </div>
 
@@ -17,56 +17,51 @@ Built by **[Alien Software Development](https://aliensoftwaredevelopment.com)** 
 
 ## Official Public Distribution Repository
 
-This public repository hosts **ready-to-run Windows x64 Offline Portable packages and installers** along with release checksums (`SHA-256`) and security advisories. Source code is maintained in a private Alien Software Development repository.
+Anyone can download the official **Windows Setup Installer (`.exe`)** or **Offline Portable (`.zip`)** directly from Releases—zero external runtime installs (`.NET` and bridge runtimes are bundled inside). Source code is maintained privately by Alien Software Development.
 
-> **Download the latest release here:**  
-> **[Releases Page -> Latest Build](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)**
-
----
-
-## Key Capabilities
-
-- **True Voice Note & Image AI Understanding**  
-  Automatically downloads, transcribes, analyzes, and answers incoming WhatsApp voice notes (`.ogg`/`.opus`/`.m4a`/`.mp3`) and product/receipt images using your configured AI provider (**Gemini**, **OpenAI**, or **DeepSeek**) grounded in your catalog, services, FAQs, and conversation history.
-- **Bilingual Bangla, Banglish & English Support**  
-  Automatically matches the customer's reply language across Bangla script, transliterated Banglish, and English.
-- **200+ Built-In Automation Rules**  
-  First-launch setup automatically initializes **200 ready-to-use automation rules** (`[AR-001]`–`[AR-200]`) covering pricing, orders, delivery, payments, warranty, and AI-first routing.
-- **Dual WhatsApp Connectivity**  
-  Connect via **QR Web Gateway** (with bundled self-contained portable runtime) or the **Official Meta WhatsApp Cloud API**.
-- **Human-in-the-Loop Approval Inbox**  
-  Choose **Automatic**, **Hybrid**, or **Manual** approval per rule or confidence threshold.
-- **Zero-Dependency Offline Portable Package**  
-  Includes the self-contained Windows runtime and bridge runtime—no separate `.NET` or `Node.js` installation needed on the target Windows PC.
-- **Automatic Update Notifications**  
-  Built-in updater checks this public repository (`alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases`) and verifies `SHA-256` checksums before applying updates.
+> **[Download Latest Release (`v1.0.0`)](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)**
 
 ---
 
-## Quick Start (Offline Portable)
+## Two Ways to Install (Windows 10 / 11 x64)
 
-1. Download `Aliensoft-AI-WhatsApp-Assistant-Offline-Portable-win-x64.zip` (and optional `.sha256`) from **[Releases](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)**.
-2. *(Optional)* Verify integrity in PowerShell:
-   ```powershell
-   Get-FileHash .\Aliensoft-AI-WhatsApp-Assistant-Offline-Portable-win-x64.zip -Algorithm SHA256
-   ```
-   Compare the hash with the `.zip.sha256` file included in the release.
-3. Right-click the `.zip` -> **Extract All...** into a folder such as `C:\Aliensoft\WhatsAppAssistant\`.
-4. Launch `Aliensoft.Assistant.Desktop.exe`.
-5. Configure your own **AI Provider API key** (Gemini / OpenAI / DeepSeek) and connect WhatsApp inside **WhatsApp Accounts & QR**.
+### Option 1: Windows Setup Installer `.exe` *(Recommended)*
+1. Download **`AliensoftAssistant_Setup_x64_1.0.0_SelfContained.exe`** from **[Releases](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)**.
+2. Run the setup wizard (creates Desktop + Start Menu shortcuts and optional Windows tray startup).
+3. Launch **ALIENSOFT AI WHATSAPP ASSISTANT** — future releases on this repository download and install automatically!
+
+### Option 2: Zero-Install Offline Portable `.zip`
+1. Download **`Aliensoft-AI-WhatsApp-Assistant-Offline-Portable-win-x64.zip`** from **[Releases](https://github.com/alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases/releases/latest)**.
+2. Extract all files into a permanent folder (e.g., `C:\Aliensoft\WhatsAppAssistant\`).
+3. Run **`Aliensoft.Assistant.Desktop.exe`**.
 
 ---
 
-## Licensing & Clean-Install Guarantee
+## Automatic Updates
 
-- **100% Clean Package**: Every release passes an automated pre-package sanitizer that strips all developer databases, inbox conversations, WhatsApp `.auth` sessions, logs, API keys, and private license files.
-- **Fresh Automatic Initialization**: On first launch on your PC, the app creates your private local data store with **200 preset automation rules** and an automatic **30-day free trial** (`%LOCALAPPDATA%\Aliensoft\WhatsAppAssistant\`).
-- **Privacy**: Your API keys, customer inbox data, and encrypted product images stay strictly on your local Windows machine under DPAPI encryption.
+- Every installation checks `alien-software-development/Aliensoft-AI-WhatsApp-Assistant-Releases` **8 seconds after startup** and every **4 hours** while running in the background.
+- When a newer version is published (e.g., `v1.0.1`), the app automatically:
+  1. Verifies the matching package (`Setup .exe` for installed apps or Portable `.zip` for portable apps) against its **`.sha256` checksum**.
+  2. Downloads and stages the verified upgrade cleanly.
+  3. Shuts down gracefully, installs the update while preserving all local settings, rules, and data under `%LOCALAPPDATA%\Aliensoft\WhatsAppAssistant\`, and relaunches the updated version.
+- Both auto-check and auto-install can be toggled anytime in **All Settings & Preferences**.
+
+---
+
+## Key Capabilities & Clean-Install Guarantee
+
+- **Voice Note & Image AI Understanding**: Automatically transcribes voice notes and analyzes images using your configured **Gemini**, **OpenAI**, or **DeepSeek** key grounded in your catalog, services, FAQs, and conversation history.
+- **200+ Built-In Automation Rules**: First launch automatically seeds all **200 preset automation rules** (`[AR-001]`–`[AR-200]`) and a **30-day free trial**.
+- **100% Clean Packages**: Automated pre-package security scanning guarantees zero developer API keys, databases, inbox chats, WhatsApp sessions, or private license files are ever shipped.
+- **Verify Integrity (PowerShell):**
+  ```powershell
+  Get-FileHash .\AliensoftAssistant_Setup_x64_1.0.0_SelfContained.exe -Algorithm SHA256
+  ```
 
 ---
 
 ## Security & Support
 
-- See [SECURITY.md](SECURITY.md) for security architecture and responsible disclosure details.
+- Security architecture & disclosure: [SECURITY.md](SECURITY.md)
 - Website: [aliensoftwaredevelopment.com](https://aliensoftwaredevelopment.com)
-- Direct WhatsApp Support & Activation: `+880 1710-978997`
+- WhatsApp Hotline & Support: `+880 1710-978997`
